@@ -23,11 +23,11 @@ public class MainActivity extends Activity {
 
         RecyclerView rvContacts = (RecyclerView) findViewById(R.id.recycler_view);
 
-        // Initialize contacts
+
         contacts = Contacts.createContactsList(1000);
         // Create adapter passing in the sample user data
         ContactsAdapter adapter = new ContactsAdapter(this, contacts);
-        // Attach the adapter to the recyclerview to populate items
+        // Attach the adapter to the recyclerview
         rvContacts.setAdapter(adapter);
         // Set layout manager to position the items
         rvContacts.setLayoutManager(new LinearLayoutManager(this));

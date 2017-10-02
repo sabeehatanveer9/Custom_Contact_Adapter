@@ -10,9 +10,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by Naveed on 10/2/2017.
- */
+
 public class ContactsAdapter  extends RecyclerView.Adapter<ContactsAdapter.ViewHolder> {
 
 
@@ -36,7 +34,6 @@ public class ContactsAdapter  extends RecyclerView.Adapter<ContactsAdapter.ViewH
     }
 
     private List<Contacts> mContacts;
-    // Store the context for easy access
     private Context mContext;
 
     // Pass in the contact array into the constructor
@@ -45,7 +42,7 @@ public class ContactsAdapter  extends RecyclerView.Adapter<ContactsAdapter.ViewH
         mContext = context;
     }
 
-    // Easy access to the context object in the recyclerview
+
     private Context getContext() {
         return mContext;
     }
@@ -69,22 +66,15 @@ public class ContactsAdapter  extends RecyclerView.Adapter<ContactsAdapter.ViewH
 
         Contacts contact = mContacts.get(i);
 
-        // Set item views based on your views and data model
+
         TextView textView = viewHolder.nameTextView;
         textView.setText(contact.getName());
         TextView textView2 = viewHolder.numTextView;
         textView2.setText(contact.getNum());
 
         Button button = viewHolder.callButton;
-        //button.setText(contact.isOnline() ? "Message" : "Offline");
-        //button.setEnabled(contact.isOnline());
 
-        viewHolder.callButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MainActivity.makeCall();
-            }
-        });
+
     }
 
     @Override
